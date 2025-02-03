@@ -17,8 +17,7 @@ A mobile app that decodes South African ID numbers (CNIC) and explains what each
 - GitHub for version control
 
 ## Installation
-1. Clone this repository to your local machine:
-   git clone https://github.com/faizan-zahid10/SA-ID-Decoder.git
+1. Clone this repository to your local machine: (https://github.com/faizan-zahid10/SA-ID-Card-Decoder.git)
 
 2. Open the project in Android Studio.
 3. Build and run the app on an emulator or a physical device.
