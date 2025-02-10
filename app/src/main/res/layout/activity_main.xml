@@ -41,9 +41,9 @@
             android:layout_width="@dimen/button_size"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:text="Clear"
+            android:onClick="btnClearClicked"
 
-            />
+            android:text="Clear" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -56,13 +56,12 @@
 
 
     <TextView
+        android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
         android:gravity="center"
-        android:text="The result will be shown"
-
-        />
+        android:text="The result will be shown" />
 
 
 </LinearLayout>
