@@ -1,5 +1,6 @@
 package com.example.sa_id_card;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
 //            Storing final id card details in actual text view
             tvResult.setText(result);
             tvResult.setTextSize(18);
+
+            Intent i=new Intent(MainActivity.this, Home.class);
+            startActivity(i);
+            finish();
         }
     }
 
