@@ -1,6 +1,6 @@
 package com.example.sa_id_card;
-
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity {
+
+
+    TextView tvDetailsOfId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +23,14 @@ public class Home extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+//      capturing received result sent by MainActivity
+        String details=getIntent().getStringExtra("tv_Result");
+
+        tvDetailsOfId=findViewById(R.id.tvDetailsOfId);
+//        display final result on home page
+        tvDetailsOfId.setText(details);
     }
+
+
 }

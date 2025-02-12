@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     EditText etCnic;
     Button btnClear;
     Button btnSubmit;
-    TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,11 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 result=result+"Number is valid";
             }
 
-//            Storing final id card details in actual text view
-            tvResult.setText(result);
-            tvResult.setTextSize(18);
-
+//            redirect to homepage with result details passed to it
             Intent i=new Intent(MainActivity.this, Home.class);
+            i.putExtra("tv_Result",result); //result is passed to home
             startActivity(i);
             finish();
         }
@@ -103,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         etCnic=findViewById(R.id.etCnic);
         btnClear=findViewById(R.id.btnClear);
         btnSubmit=findViewById(R.id.btnSubmit);
-        tvResult=findViewById(R.id.tvResult);
     }
 
     public void btnClearClicked(View v){
